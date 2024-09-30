@@ -1,0 +1,23 @@
+<h2>Expenses summary</h2>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Attachment</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (expense of expenses; track expense.id) {
+    <tr>
+      <td>{{ expense.id }}</td>
+      <td>{{ expense.name }}</td>
+      <td>{{ expense.type }}</td>
+      <td>{{ expense.amount }}</td>
+      <td>{{ expense.attachment }}</td>
+    </tr>
+    }
+  </tbody>
+</table>

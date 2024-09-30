@@ -1,0 +1,12 @@
+.expense-field {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 500px;
+  padding-bottom: 10px;
+}
+.expense-field > label {
+  flex: 1;
+}
+.expense-field > input {
+  flex: 2;
+}
