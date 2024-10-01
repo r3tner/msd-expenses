@@ -1,0 +1,27 @@
+<h2>Add Expense</h2>
+<form (ngSubmit)="submit()" #expensesForm="ngForm">
+  <div class="expense-field">
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="name" name="name" required />
+  </div>
+  <div class="expense-field">
+    <label for="type">Type:</label>
+    <input type="text" id="type" [(ngModel)]="type" name="type" required />
+  </div>
+  <div class="expense-field">
+    <label for="amount">Amount:</label>
+    <input
+      type="number"
+      id="amount"
+      [(ngModel)]="amount"
+      name="amount"
+      min="0"
+      required
+    />
+  </div>
+  <!-- <div class="expense-field">
+    <label for="attachment">Attachment:</label>
+    <input type="file" id="attachment" (change)="selectFile($event)" />
+  </div> -->
+  <button type="submit" [disabled]="!expensesForm.valid">Add Expense</button>
+</form>
